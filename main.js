@@ -108,3 +108,48 @@ const layoutHorizontal = {
     title: "Horizontal"
 };
 Plotly.newPlot(document.getElementById("horizontal"), dataHorizontal, layoutHorizontal);
+
+//Pie chart
+
+const trace1Pie = {
+    labels: ["A", "B", "C", "D"],
+    values: [20, 45, 5, 30],
+    name: "Pie values",
+    type: "pie"
+};
+const dataPie = [trace1Pie];
+const layoutPie = {
+    height: 400,
+    width: 500
+};
+Plotly.newPlot(document.getElementById("pie"),dataPie, layoutPie);
+
+//Histo
+
+let xHisto = [];
+for (let i = 0; i < 500; i++) {
+     xHisto[i] = Math.random();
+}
+const trace1Histo = {
+    x: xHisto,
+    type: "histogram"
+};
+const dataHisto = [trace1Histo];
+Plotly.newPlot(document.getElementById("histo"), dataHisto);
+
+//Box plot
+
+let yBox = [];
+for (let j = 0; j < 500; j++) {
+     yBox[j] = Math.random();
+}
+const traceBox = {
+    y: yBox,
+    type: "box"
+};
+const dataBoc = [traceBox]; 
+Plotly.newPlot(document.getElementById("box"), dataBoc);
+
+//Dashboard
+
+
